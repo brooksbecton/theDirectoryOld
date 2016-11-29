@@ -1,0 +1,26 @@
+<div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-default navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-class= "flipped ? 'toggleNormal' : 'toggleFlipped'"ng-click="toggleFlipped();" data-toggle="collapse" data-target="#navigationbar" id="navbarToggle" >
+        <img id="navBrand" src="_imgs/binoculars.png" >
+        </button>
+        <a class="navbar-brand pull-left" ng-class="{ active: isActive('/index')}"  ng-click="collapseNav();toggleFlipped('brand')" href="#/index">The Directory</a>
+            </div>
+    <div class="collapse navbar-collapse" id="navigationbar">
+              <ul class="nav navbar-nav">
+                <li ng-click="collapseNav();toggleFlipped()" ng-class="{ active: isActive('/resources')}"><a href="#/resources">Resources</a>
+                </li>
+                <li role="presentation" ng-click="collapseNav();toggleFlipped()" ng-class="{ active: isActive('/utilities')}"><a href="#/utilities">Utilities</a>
+                </li>
+                <li role="presentation" ng-click="collapseNav();toggleFlipped()" ng-class="{ active: isActive('/projects')}"><a href="#/projects">Projects</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>

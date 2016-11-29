@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default navbar-static-top" ng-controller="navController" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-class= "flipped ? 'toggleNormal' : 'toggleFlipped'"ng-click="toggleFlipped();" data-toggle="collapse" data-target="#navigationbar" id="navbarToggle" >
+        <img id="navBrand" src="_imgs/binoculars.png" >
+        </button>
+        <a class="navbar-brand pull-left" ng-class="{ active: isActive('/index')}"  ng-click="collapseNav();toggleFlipped('brand')" href="#/index">The Directory</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navigationbar">
+        <ul class="nav navbar-collapse text-center" ng-class="{'nav-pills' : stackNav()}">
+            <li ng-click="collapseNav();toggleFlipped()" ng-class="{ active: isActive('/resources')}"><a href="#/resources">Resources</a>
+            </li>
+            <li role="presentation" ng-click="collapseNav();toggleFlipped()" ng-class="{ active: isActive('/utilities')}"><a href="#/utilities">Utilities</a>
+            </li>
+            <li role="presentation" ng-click="collapseNav();toggleFlipped()" ng-class="{ active: isActive('/projects')}"><a href="#/projects">Projects</a>
+            </li>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="//www.linkedin.com/in/brooksbecton" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+            </ul>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse  -->
+
+</nav>

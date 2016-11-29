@@ -1,0 +1,51 @@
+<div id="carousel" class="col-sm-12 pull-right carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner firefox-width-fix" role="listbox">
+        <div class="item active">
+            <img class="center" src="_imgs/orange-leaves.jpg" alt="Blue stars of mountain">
+        </div>
+        <div class="item">
+            <img class="center" src="_imgs/orange-sunset.jpg" alt="Snowy mountain tops">
+        </div>
+        <div class="item">
+            <img class="center" src="_imgs/orange-trees.jpg" alt="Cold artic lakeside">
+        </div>
+    </div>
+</div>
+<div class="col-xs-12" id="bottom_container">
+    <div ng-include src="'_includes/projects-nav.html'"></div>
+    <div class="col-sm-8 project-body">
+        <h2><a href="http://adincath.bitbucket.org/breakout/" target="_blank">Breakout</a></h2>
+        <hr>
+        <h3><strong>Description:</strong></h3>
+        <p>This is a simple breakout game using HTML5 Canvas. It was very interesting to see 
+        how you could combine the canvas in JavaScript to create this iconic game. This was 
+        first experience when any kind of game logic.</p>
+        <p>Understanding redrawing the canvas and refresh rates was very interesting considering how much modern video game players take this logic for granted.</p>
+        <p>I have started to research Node JS and hope to combine the two for this project in order to provide on line capabilities for users.</p>
+        <div class="col-sm-6">
+            <h3><strong>Components:</strong></h3>
+            <ul>
+                <li>HTML5 Canvas</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <h3><strong>Future Plans:</strong></h3>
+            <ul >
+                <li>Better UI</li>
+                <li>On line Pong Play (Using NodeJS)</li>
+                <ul>
+                    <li>Leader boards</li>
+                    <li>On line Chat</li>
+                </ul>
+            </ul>
+        </div>
+        </div><!-- /.project-body -->
+        
+    </div>
+    <!-- /#bottom_container -->

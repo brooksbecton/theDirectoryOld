@@ -1,0 +1,41 @@
+<table ng-controller="commentController" class="table">
+  <tr ng-hide="commenting">
+    <td class="col-md-4"></td>
+    <td class="add_comment col-md-4" class="text-center" ng-click="commenting = !commenting; preview = true"><p>Add Comment <span class="glyphicon glyphicon-comment"></span></p></td>
+    <td class="col-md-4"></td>
+  </tr>
+  
+  <!-- Comment Submission -->
+  <tr ng-show="commenting">
+    <form action="../_php/persistComment.php" method="post">
+      <td class="col-md-4">
+        <input ng-model="user" type="text" name="user">
+      </td>
+      <td class="col-md-4 text-center">
+        <input ng-model="comment" type="text" name="comment">
+      </td>
+      <td class="col-md-4 text-center" ng-model="date">
+        <input type="submit"> <!--ng-click="persistComment(); commenting = !commenting"-->
+        <button type="button" ng-click="cancelComment(); commenting = !commenting">Cancel</button>
+      </td>
+	  
+    </form>
+  </tr>
+  <!-- Preview -->
+  <tr ng-show="commenting">
+    <td class="col-md-4" ng-bind="user">
+      <div class="angular-with-newlines"></div>
+    </td>
+    <td class="col-md-4">
+      <div class="angular-with-newlines"><pre>{{comment}}</pre></div>
+    </td>
+    <td class="col-md-4 text-center" ng-bind="date"></td>
+  </tr>
+  <!-- Existing Comments -->
+  <tr ng-repeat="comment in comments | limitTo: 5">
+    <td>{{comment.user}}</td>
+    <td><em>{{comment.comment}}</em></td>
+    <td class="text-center">{{comment.date}}</td>
+  </tr>
+
+</table>

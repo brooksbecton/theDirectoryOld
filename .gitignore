@@ -1,0 +1,14 @@
+projects-src/
+.DS_Store
+Thumbs.db
+system-config.js*
+app/**/*.js
+app/**/*.map
+node_modules
+jspm_packages
+bower_components
+aot/*
+dist/*
+yarn.lock
+*.jpg
+*.png
