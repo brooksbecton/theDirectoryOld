@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Klikit",
+        "desc": "Klikit is a web based quiz application. Our goal was to make a quiz app that provides instant response to users. If a user got added to a quiz or class they would know instantly. Also, as students take their quizzes or polls the instructor would be able to watch answers as they come in.\nKlikit takes advantages of many technologies that allow us to provide a simple and snappy experience for our users. For front end development, Klikit uses AngularJS 1 and Angular Material. AngularJS's two-way binding allows us to watch variables and change them on the front in to give instant feedback. Our backend is built on NodeJS and Express. Firebase is used to store our quiz data and provide federated authentication.",
+        "components": {
+            "AngularJS 1": [],
+            "Angular Material": [],
+            "NodeJS": [],
+            "Express": [],
+            "Google Firebase": [
+                    "Database",
+                    "Authentication"
+            ],
+            "HTML": [],
+            "CSS": []
+        },
+        "futurePlans": [
+            "User and Instructor Dashboard",
+            "Multiple Types of Quizzes"
+        ]
+    }
+]
