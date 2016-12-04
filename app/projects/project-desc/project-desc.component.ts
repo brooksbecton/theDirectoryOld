@@ -1,8 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { ProjectService } from '../projects.service'
 import { Project } from '../project'
+import { ProjectNavComponent } from '../nav/projects-nav.component'
+import { ProjectService } from '../projects.service'
 
 
 @Component({
@@ -13,8 +14,9 @@ import { Project } from '../project'
 
 export class ProjectDescComponent {
 
-  projects: Project[];
-  currentProject: Object;
+  projects: Project[]
+  projectNameParameter: string = "";
+  project: Object = {};
   private sub: any;
 
   constructor(
@@ -24,7 +26,7 @@ export class ProjectDescComponent {
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.currentProject = params['project-name']; 
+      this.projectNameParameter = params['project-name'];
       this.loadProjects()
     });
   }
@@ -32,7 +34,7 @@ export class ProjectDescComponent {
   loadProjects() {
     this.projectService.getProjects()
       .subscribe(
-      projects => this.projects = projects,
+      projects => this.setCurrentProject(projects, this.projectNameParameter),
       err => {
         console.log(err);
       });
@@ -40,6 +42,13 @@ export class ProjectDescComponent {
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+
+  setCurrentProject(projects: Object, newProject: string) {
+    //If we have information for the requested project
+    if (projects[newProject]) {
+      this.project = projects[newProject];
+    }
   }
 
 }
