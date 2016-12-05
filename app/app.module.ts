@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CapitalizePipe } from "./capitalize.pipe";
 import { NotFoundComponent } from './404/NotFound.component';
+import { ProjectHighlightNavComponent } from './projects-highlight-nav/projects-highlight-nav.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectNavComponent } from './projects/nav/projects-nav.component';
 import { ProjectDescComponent } from './projects/project-desc/project-desc.component';
@@ -29,6 +30,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     NotFoundComponent,
     ProjectsComponent,
     ProjectDescComponent,
+    ProjectHighlightNavComponent,
     ProjectNavComponent,
     TopNavComponent,
     ResourcesComponent,
