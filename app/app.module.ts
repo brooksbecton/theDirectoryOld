@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { CapitalizePipe } from "./capitalize.pipe"
+import { CapitalizePipe } from "./capitalize.pipe";
+import { NotFoundComponent } from './404/NotFound.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectNavComponent } from './projects/nav/projects-nav.component';
 import { ProjectDescComponent } from './projects/project-desc/project-desc.component';
@@ -25,6 +26,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
   declarations: [
     AppComponent,
     CapitalizePipe,
+    NotFoundComponent,
     ProjectsComponent,
     ProjectDescComponent,
     ProjectNavComponent,
