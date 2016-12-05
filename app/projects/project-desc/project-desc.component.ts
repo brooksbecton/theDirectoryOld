@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Project } from '../project'
 import { ProjectNavComponent } from '../nav/projects-nav.component'
@@ -21,7 +21,8 @@ export class ProjectDescComponent {
 
   constructor(
     private projectService: ProjectService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -48,6 +49,10 @@ export class ProjectDescComponent {
     //If we have information for the requested project
     if (projects[newProject]) {
       this.project = projects[newProject];
+    }
+    else {
+    this.router.navigate(['404']); // here "About" is name not path
+
     }
   }
 
