@@ -10,5 +10,4 @@ bower_components
 aot/*
 dist/*
 yarn.lock
-*.jpg
-*.png
+
